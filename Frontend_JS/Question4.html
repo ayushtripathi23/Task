@@ -1,0 +1,21 @@
+<html>
+  <body>
+    Name<input type="text" id="name" onkeyup="EnableDisable(this)" />
+    Check<input type="radio" id="check" onclick="EnableDisable(this)" />
+    <hr />
+    <input id="btnSubmit" type="button" value="Submit" disabled="disabled" />
+  </body>
+
+  <script>
+    function EnableDisable(name) {
+      var btnSubmit = document.getElementById("btnSubmit");
+      if (name.value != "") {
+        btnSubmit.disabled = false;
+      } else if (document.getElementById("check").checked) {
+        btnSubmit.disabled = false;
+      } else {
+        btnSubmit.disabled = true;
+      }
+    }
+  </script>
+</html>
